@@ -12,15 +12,17 @@
         height: 100dvh;
         width: 100dvw;
         overflow: hidden;
+        background: #e8e8e8;
       }
 
-      body {
-        background: #e8e8e8;
+      main {
+        height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
         position: relative;
+        transform: scale(0.65);
+        animation: scale 5s forwards;
       }
 
       .invite {
@@ -34,7 +36,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50dvh);
+        transform: translate(-50%, -52dvh);
         animation: move 1s 1.5s forwards ease-in;
       }
 
@@ -76,28 +78,36 @@
           opacity: 1;
         }
       }
+
+      @keyframes scale {
+        100% {
+          transform: scale(1);
+        }
+      }
     </style>
   </head>
   <body>
-    <img
-      src="https://jtparrett.github.io/andy-wedding/envelope-bg.png"
-      class="envelope"
-    />
-    <img
-      src="https://jtparrett.github.io/andy-wedding/flowers-bottom-left.png"
-      class="flowers-bottom-left"
-    />
-    <img
-      src="https://jtparrett.github.io/andy-wedding/flowers-top-right.png"
-      class="flowers-top-right"
-    />
-    <img
-      src="https://jtparrett.github.io/andy-wedding/invite.jpg"
-      class="invite"
-    />
-    <img
-      src="https://jtparrett.github.io/andy-wedding/envelope-fg.png"
-      class="envelope"
-    />
+    <main>
+      <img
+        src="https://jtparrett.github.io/andy-wedding/envelope-bg.png"
+        class="envelope"
+      />
+      <img
+        src="https://jtparrett.github.io/andy-wedding/flowers-bottom-left.png"
+        class="flowers-bottom-left"
+      />
+      <img
+        src="https://jtparrett.github.io/andy-wedding/flowers-top-right.png"
+        class="flowers-top-right"
+      />
+      <img
+        src="https://jtparrett.github.io/andy-wedding/invite.jpg"
+        class="invite"
+      />
+      <img
+        src="https://jtparrett.github.io/andy-wedding/envelope-fg.png"
+        class="envelope"
+      />
+    </main>
   </body>
 </html>
