@@ -10,6 +10,8 @@
         margin: 0;
         padding: 0;
         height: 100dvh;
+        width: 100dvw;
+        overflow: hidden;
       }
 
       body {
@@ -18,46 +20,47 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        position: relative;
       }
 
       .invite {
-        height: 80dvh;
+        height: 50dvh;
         transform: rotate(90deg);
         animation: spin 1s 2.3s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
       }
 
       .envelope {
-        width: 80dvh;
+        width: 50dvh;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -65dvh);
+        transform: translate(-50%, -40dvh);
         animation: move 1s 1.5s forwards ease-in;
       }
 
       .flowers-top-right {
         opacity: 0;
         position: absolute;
-        height: 80dvh;
+        height: 50dvh;
         top: 50%;
         right: 50%;
         animation: fade 1s 2.8s forwards;
-        transform: translate(47dvh, -70dvh);
+        transform: translate(26dvh, -43dvh);
       }
 
       .flowers-bottom-left {
         opacity: 0;
         position: absolute;
-        height: 80dvh;
+        height: 50dvh;
         left: 50%;
-        bottom: 50%;
+        right: 50%;
         animation: fade 1s 2.5s forwards;
-        transform: translate(-45dvh, 60dvh);
+        transform: translate(-24dvh, 17dvh);
       }
 
       @keyframes move {
         100% {
-          transform: translate(-50%, 35dvh);
+          transform: translate(-50%, 25dvh);
         }
       }
 
