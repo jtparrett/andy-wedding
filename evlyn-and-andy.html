@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You have been invited to the wedding of Evlyn & Andy</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+      }
+
+      body {
+        background: #e8e8e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .invite {
+        height: 80dvh;
+        transform: rotate(90deg);
+        animation: spin 1s 2.3s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      }
+
+      .envelope {
+        width: 80dvh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65dvh);
+        animation: move 1s 1.5s forwards ease-in;
+      }
+
+      .flowers-top-right {
+        opacity: 0;
+        position: absolute;
+        height: 80dvh;
+        top: 50%;
+        right: 50%;
+        animation: fade 1s 2.8s forwards;
+        transform: translate(47dvh, -70dvh);
+      }
+
+      .flowers-bottom-left {
+        opacity: 0;
+        position: absolute;
+        height: 80dvh;
+        left: 50%;
+        bottom: 50%;
+        animation: fade 1s 2.5s forwards;
+        transform: translate(-45dvh, 60dvh);
+      }
+
+      @keyframes move {
+        100% {
+          transform: translate(-50%, 35dvh);
+        }
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(0deg);
+          box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      @keyframes fade {
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./envelope-bg.png" class="envelope" />
+    <img src="./flowers-bottom-left.png" class="flowers-bottom-left" />
+    <img src="./flowers-top-right.png" class="flowers-top-right" />
+    <img src="./invite.jpg" class="invite" />
+    <img src="./envelope-fg.png" class="envelope" />
+  </body>
+</html>
