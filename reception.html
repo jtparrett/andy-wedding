@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You have been invited to the wedding of Evelyn & Andy</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100dvh;
+        width: 100dvw;
+        overflow: hidden;
+        background: #e8e8e8;
+      }
+
+      main {
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transform: scale(0.65);
+        animation: scale 5s forwards;
+      }
+
+      .invite {
+        height: 60dvh;
+        transform: rotate(90deg);
+        animation: spin 1s 2.3s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      }
+
+      .envelope {
+        width: 60dvh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -52dvh);
+        animation: move 1s 1.5s forwards ease-in;
+      }
+
+      .flowers-top-right {
+        opacity: 0;
+        position: absolute;
+        height: 50dvh;
+        top: 50%;
+        right: 50%;
+        animation: fade 1s 2.8s forwards;
+        transform: translate(30dvh, -47dvh);
+      }
+
+      .flowers-bottom-left {
+        opacity: 0;
+        position: absolute;
+        height: 50dvh;
+        left: 50%;
+        right: 50%;
+        animation: fade 1s 2.5s forwards;
+        transform: translate(-31dvh, 22dvh);
+      }
+
+      @keyframes move {
+        100% {
+          transform: translate(-50%, 25dvh);
+        }
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(0deg);
+          box-shadow: 10px 30px 20px rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      @keyframes fade {
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes scale {
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      a {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="./envelope-bg-green.png" class="envelope" />
+      <img src="./flowers-bottom-left-edit.png" class="flowers-bottom-left" />
+      <img src="./flowers-top-right-edit.png" class="flowers-top-right" />
+      <a href="https://forms.gle/QbMskCnhDmDF5KPj9">
+        <img src="./invite-reception.jpg" class="invite" />
+      </a>
+      <img src="./envelope-fg-green.png" class="envelope" />
+    </main>
+  </body>
+</html>
