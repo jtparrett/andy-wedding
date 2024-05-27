@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/reception",
+      "destination": "/reception.html",
+      "permanent": true
+    }
+  ]
+}
